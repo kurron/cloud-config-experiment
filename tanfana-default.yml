@@ -1,0 +1,34 @@
+server:
+    port: 0
+# specifying a context path seems to mess up the actuator endpoints
+#   context-path: /tanfana
+
+info:
+    app:
+        name: Tanfana
+        description: Provides centralized circuit-breaker dashboard 
+        version: 1.0.0
+
+endpoints:
+    shutdown:
+        enabled: true
+
+spring:
+    main:
+        show_banner: true
+    profiles:
+        active: default
+    groovy:
+        template:
+            check-template-location: true
+    cloud:
+        config:
+            discovery:
+                enabled: true
+    rabbitmq:
+        host: rabbitmq
+        port: 5672
+        username: guest
+        password: guest
+        virtualHost: /
+
