@@ -42,13 +42,6 @@ server:
 logging:
     config: classpath:logback.xml
 
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:8761/eureka/
-    instance:
-        preferIpAddress: true
-
 magni:
     maxPayloadSize: 10
     requireCorrelationId: true
