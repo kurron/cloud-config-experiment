@@ -29,10 +29,7 @@ spring:
         password: guest
         virtualHost: /
 
-    cloud:
-        config:
-            discovery:
-                enabled: true
+
     groovy:
         template:
             check-template-location: false
